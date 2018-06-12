@@ -11,13 +11,13 @@ class Header extends Component {
           Sign out
         </button>
       )
+    } else {
+      return (
+        <button onClick={() => this.props.authenticate(true)}>
+          Sign In
+        </button>
+      )
     }
-
-    return (
-      <button onClick={() => this.props.authenticate(true)}>
-        Sign In
-      </button>
-    )
   }
 
   render() {

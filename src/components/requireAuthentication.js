@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
 
-export default function(ChildComponent) {
+export default ChildComponent => {
   class ComposedComponent extends Component {
-    static contextTypes = {
-      router: PropTypes.object,
-    }
-
     componentDidMount() {
       this.shouldNavigateAway()
     }
